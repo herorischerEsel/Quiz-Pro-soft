@@ -1,0 +1,62 @@
+package Nick;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
+
+public class Question implements Comparable<Question> {
+    private Set<Integer> correctOptions;
+    private List<String> options;
+    private String questionText;
+
+
+    public Question(Set<Integer> correctOptions, List<String> options, String questionText) {
+        this.correctOptions = correctOptions;// richtiege antwort
+        this.options = options;// antwort möglichkeiten
+        this.questionText = questionText;//die fragen
+
+    }
+
+    public Set<Integer> getCorrectOptions() {
+        return correctOptions;
+    }
+
+    public void setCorrectOptions(Set<Integer> correctOptions) {
+       this.correctOptions = correctOptions;
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public void setOptions(List<String> options) {
+        this.options = options;
+    }
+
+    public String getQuestionText() {
+        return questionText;
+    }
+
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
+    }
+
+
+    public boolean checkAnswer() {
+        return false;
+    }
+
+    @Override//wenn die main nicht von diesen überschrieben wird gibt es eine fehler meldung
+    public String toString() {
+        return "Question{" +
+                "correctOption=" + correctOptions +
+                ", options=" + options +
+                ", questionText='" + questionText + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Question o) {
+        Random random = new Random();
+        return Integer.compare(random.nextInt(), random.nextInt());
+    }
+
