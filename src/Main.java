@@ -14,8 +14,11 @@ import java.util.concurrent.TimeUnit;                   //Element Zeit wird eing
                     new Question(Set.of(1), List.of("1923", "1911", "1931", "1947"), "Im welchem Jahr wurde das Disney Studio gegründet?"),
                     new Question(Set.of(3), List.of("1911", "1925", "1886", "1897"), "Im welchem Jahr entstand das erste Automobil?"),
                     new Question(Set.of(2), List.of("1945", "1949", "1955", "1947"), "Wann wurde die Bundesrepublik Deutschland gegründet?"),
+                    new Question(Set.of(3), List.of("Shameless (US)", "Braking Bad", "Game of Thrones", "Lost"), "Welche TV-Serie, die von 2011 bis 2019 lief, wurde für ihre komplexe Handlung und vielschichtigen Charaktere gelobt?"),
                     new Question(Set.of(4), List.of("1981", "1985", "1988", "1989"), "Wann fiel Mauer zwischen der BRD und der DDR?"),
                     new Question(Set.of(1), List.of("1977", "1975", "1979", "1981"), "Wann kam der erste Star Wars Film raus?"),
+                    new Question(Set.of(2), List.of("2012", "2013", "2014", "2011"), "GTAV / GTA5 kam im Herbst:..."),
+                    new Question(Set.of(4), List.of("SoundCloud", "iTunes", "Deezer", "Spotify"), "Welche Musikstreaming-Plattform wurde 2008 gegründet und hat die Art und Weise, wie Menschen Musik konsumieren, maßgeblich verändert?"),
                     new Question(Set.of(2, 4), List.of("Didrik Pining", "Leif Eriksson", "Sir Francis Drake", "Christopher Columbus"), "Wer endeckte Amerika als erstes")));
             Collections.sort(questions);
             Quiz quiz = new Quiz(questions);
