@@ -6,13 +6,13 @@ public class Question implements Comparable<Question> {
     private Set<Integer> correctOptions;
     private List<String> options;//TODO may move into own class
     private String questionText;
-    private int questionTimer;
+    //private int questionTimer;
 
-    public Question(Set<Integer> correctOptions, List<String> options, String questionText, int questionTimer) {
+    public Question(Set<Integer> correctOptions, List<String> options, String questionText) {
         this.correctOptions = correctOptions;
         this.options = options;
         this.questionText = questionText;
-        this.questionTimer = questionTimer;
+        //this.questionTimer = questionTimer;
     }
 
     public Set<Integer> getCorrectOptions() {
@@ -39,13 +39,13 @@ public class Question implements Comparable<Question> {
         this.questionText = questionText;
     }
 
-    public int getQuestionTimer() {
-        return questionTimer;
-    }
-
-    public void setQuestionTimer(int questionTimer) {
-        this.questionTimer = questionTimer;
-    }
+//    public int getQuestionTimer() {
+//        return questionTimer;
+//    }
+//
+//    public void setQuestionTimer(int questionTimer) {
+//        this.questionTimer = questionTimer;
+//    }
 
     public boolean checkAnswer() {
         return false; // TODO: 26.01.2024 have to implement
@@ -57,14 +57,13 @@ public class Question implements Comparable<Question> {
                 "correctOption=" + correctOptions +
                 ", options=" + options +
                 ", questionText='" + questionText + '\'' +
-                ", questionTimer=" + questionTimer +
                 '}';
     }
 
     @Override
     public int compareTo(Question o) {
         Random random = new Random();
-        return Integer.compare(this.questionTimer + random.nextInt(), o.getQuestionTimer() + random.nextInt());
+        return Integer.compare(random.nextInt(), random.nextInt());
     }
 
 }

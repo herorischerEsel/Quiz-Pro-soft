@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Quiz {
-    private int score;
+    private int score;                                                                                                  //private klasse Punktezaehler werden initirt
     private List<Question> questions;
     private int currentQuestion;
 
